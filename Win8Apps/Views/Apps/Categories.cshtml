@@ -1,0 +1,10 @@
+﻿@model IEnumerable<Win8Apps.Models.CategoryDescription>
+
+@foreach (var cat in Model)
+{
+    <div class="button image-button bg-color-blue fg-color-white" >
+        <a class="fg-color-white" href="@Url.Action("Search", "Apps", new { category = @cat.Title }, null)">@cat.Title
+            <img class="bg-color-blueDark" src="~/Content/images/Cube-small.png"/>
+        </a>
+    </div>
+}

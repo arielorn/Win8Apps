@@ -1,0 +1,44 @@
+﻿@model IEnumerable<Win8Apps.Model.AppsList>
+
+@{
+    ViewBag.Title = "WinApps - Topics";
+}
+
+<div class="page-region">
+    <div class="page-region-content">
+        <div class="page-header-content">
+            <h1 itemprop="name">Topics</h1>
+        </div>
+        <div class="grid">
+            @{
+                var bgColors = new[] { "bg-color-red", "bg-color-greenDark", "bg-color-blueDark", "bg-color-pinkDark", "bg-color-yellow" };
+                var fgColors = new[] { "fg-color-white", "fg-color-white", "fg-color-white", "fg-color-white", "fg-color-darken" };
+                var index = 0;
+            }
+
+            @foreach (var topic in Model)
+            {
+                var bgColor = bgColors[index];
+                var fgColor = fgColors[index];
+                <div class="row">
+                    <div class="span12 @bgColor @fgColor padding15" style="padding-top: 0px;">
+                        <a href="@Url.Action("Topic", "Apps", new { topicId = @topic.Id})">
+                            <h2 class="@fgColor">@topic.Title</h2>
+                            <div class="row" style="display: inline-block;">
+                                @if (!string.IsNullOrEmpty(@topic.Image))
+                                {
+                                    <img src="http://wscont2.apps.microsoft.com/winstore//1.4x/@topic.Image" alt="@topic.Title" class="place-left"/>   
+                                }
+                                <p class="@fgColor">@topic.Description</p>
+                            </div>
+                            <h4 class="@fgColor">Last seen on @topic.LastDateSeen.ToShortDateString()</h4>
+                        </a>
+                    </div>
+                </div>
+                        
+                index++;
+                index = index%bgColors.Length;
+            }
+        </div>
+    </div>
+</div>

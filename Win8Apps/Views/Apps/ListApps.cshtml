@@ -1,0 +1,11 @@
+﻿@model IEnumerable<Win8Apps.Model.App>
+
+
+<div class="grid">
+    <div class="row">
+        @foreach (var app in Model)
+        {
+            @Html.DisplayFor(x => app, "App", new { small = true})
+        }
+    </div>
+</div>

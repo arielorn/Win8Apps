@@ -1,0 +1,41 @@
+﻿@model Win8Apps.Model.App
+
+@{
+    var color = Model.Foreground == "light" ? "fg-color-white" : "fg-color-black";
+    var inverse = Model.Foreground == "light" ? "" : "inverse";
+    var size = "game-tile";
+
+    if (ViewData.ContainsKey("small") && ViewData["small"] is bool && (bool)ViewData["small"] == true)
+    {
+        size = "game-small-tile";
+    }
+}
+<a href="@Url.Action("App", "Apps", new { id = @Model.FriendlyUrl})">
+<div class="tile @size @color" style="background-color: @Model.Background" data-role="tile-slider" data-param-duration="1000" data-param-direction="down" data-param-mouse="true">
+    <div class="tile-content @color">
+        <div class="grid">
+            <div class="row" style="display: inline-block;">
+                <img src="http://wscont2.apps.microsoft.com/winstore//1x/@Model.Icon" alt="@Model.Title" class="place-left"/>
+                <h3 style="margin-bottom: 5px; max-height: 48px; overflow: hidden; text-overflow: ellipsis;" class="@color">@Model.Title</h3>
+            </div>
+            <div class="row">
+                <h5 class="@color">
+                    Rating: 
+                    <div class="rating small @inverse" data-role="rating" data-param-vote="off" data-param-rating="@Model.ScoreRating" data-param-stars="5">
+                    </div>
+                </h5>
+                <h5 class="@color">@Model.Price.Amount$</h5>
+            </div>
+        </div>
+        <div class="brand">
+            <div class="name @color">@Model.Developer</div>
+        </div>
+    </div>
+    <div class="tile-content @color" data-param-direction="up">
+        <h3 style="margin-bottom: 5px;" class="@color">@Model.Title</h3>
+        <p class="@color">
+            <span style="white-space: pre-line">@Model.Description</span>
+        </p>
+    </div>
+</div>
+</a>

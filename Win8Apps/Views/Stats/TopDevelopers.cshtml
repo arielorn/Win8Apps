@@ -1,0 +1,20 @@
+﻿@model IQueryable<Win8Apps.Indexes.Developers_AppsCount.ReduceResult>
+
+<table class="striped">
+    <caption></caption>
+    <thead>
+        <tr>
+            <th>Developer</th>
+            <th class="right"># Applications</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var result in Model)
+        {
+            <tr>
+                <td>@Html.ActionLink(@result.Developer, "Search", "Apps", new { developer = @result.Developer }, null)</td>
+                <td class="right">@result.Count</td>
+            </tr>
+        }
+    </tbody>
+</table>

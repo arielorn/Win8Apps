@@ -1,0 +1,174 @@
+@using System.Web.Optimization
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="description" content="WinApps - Windows Store alternative">
+    <meta name="author" content="Itay Sagui; Ariel Ornstein">
+    <meta name="keywords" content="windows 8, modern, Windows Store, apps, applications">
+    
+    <link rel="icon" href="~/favicon.ico">
+    <link rel="shortcut icon" href="~/favicon.ico">
+
+
+    <meta name="msApplication-tooltip" content="WinApps - Windows Store alternative" />
+    <meta name="msApplication-starturl" content="./" />
+    <meta name="msApplication-window" content="width=1024;height=768" />
+    <meta name="msApplication-navbutton-color" content="#2d89ef" />
+    
+    <meta name="msApplication-task" content="name=Games;action-uri=.@Url.Action("Search", "Apps", new { category = "Games" });icon-uri=./favicon.ico" />
+    <meta name="msApplication-task" content="name=Social;action-uri=.@Url.Action("Search", "Apps", new { category = "Social" });icon-uri=./favicon.ico" />
+    <meta name="msApplication-task" content="name=Photo;action-uri=.@Url.Action("Search", "Apps", new { category = "Photo" });icon-uri=./favicon.ico" />
+    <meta name="msApplication-task" content="name=Education;action-uri=.@Url.Action("Search", "Apps", new { category = "Education" });icon-uri=./favicon.ico" />
+
+    <meta name="msApplication-task-separator" content="" />
+    <meta name="msApplication-task" content="name=Statistics;action-uri=.@Url.Action("Overview", "Stats");icon-uri=./favicon.ico" />
+    
+    @if (@ViewBag.Title != null)
+    {
+        <title>@ViewBag.Title</title>
+    }
+    else
+    {
+        <title>WinApps</title>
+    }
+
+
+    @RenderSection("Head", required: false)
+    @if (!IsSectionDefined("Head"))
+    {
+        <meta name="application-name" content="WinApps" />
+        Html.RenderAction("FacebookTags", "Home");
+    }
+
+    @Styles.Render("~/content/css")
+
+    @Scripts.Render("~/js")
+    @Scripts.Render("~/js/modern")
+</head>
+<body class="modern-ui">
+
+<div class="page">
+	<div class="nav-bar">
+		<div class="nav-bar-inner padding10">
+			<span class="pull-menu"></span>
+
+		    <a href="/">
+		        <span class="element brand" >
+		            <i class="fg-color-white icon-stats" style="font-size: 24px;"></i>
+		            Win Apps <small>0.94</small>
+		        </span>
+		    </a>
+
+			<div class="divider"></div>
+
+		    <ul class="menu">
+		        <li><a href="/">Home</a></li>
+		        <li data-role="dropdown">
+		            <a href="#">Top Apps</a>
+		            <ul class="dropdown-menu">
+		                <li>@Html.ActionLink("Recent", "Recent", "Apps")</li>
+		                <li class="divider"></li>
+		                <li>@Html.ActionLink("Top Games", "TopGames", "Apps")</li>
+		                <li>@Html.ActionLink("Top Free Games", "TopFreeGames", "Apps")</li>
+		                <li class="divider"></li>
+		                <li>@Html.ActionLink("Top Apps", "TopApps", "Apps")</li>
+		                <li>@Html.ActionLink("Top Free Apps", "TopFreeApps", "Apps")</li>
+		            </ul>
+		        </li>
+                <li>@Html.ActionLink("Topics", "Topics", "Apps")</li>
+                <li>@Html.ActionLink("Gone free", "GoneFree", "Apps")</li>
+
+		        <li data-role="dropdown">
+		            <a href="#">Browse</a>
+		            <ul class="dropdown-menu">
+		                <li>@Html.ActionLink("Games", "Search", "Apps", new { category = "Games" }, null)</li>
+		                <li>@Html.ActionLink("Social", "Search", "Apps", new { category = "Social" }, null)</li>
+		                <li>@Html.ActionLink("Photo", "Search", "Apps", new { category = "Photo" }, null)</li>
+		                <li>@Html.ActionLink("Education", "Search", "Apps", new { category = "Education" }, null)</li>
+		                <li class="divider"></li>
+		                <li>@Html.ActionLink("All", "Search", "Apps")</li>
+		            </ul>
+		        </li>
+		        <li data-role="dropdown"><a href="#">Stats</a>
+		            <ul class="dropdown-menu">
+		                <li>@Html.ActionLink("Overview", "Overview", "Stats")</li>
+		                <li>@Html.ActionLink("Apps", "Apps", "Stats")</li>
+		                <li>@Html.ActionLink("Developers", "Developers", "Stats")</li>
+		            </ul>
+		        </li>
+		        <li data-role="dropdown"><a href="#">Info</a>
+		            <ul class="dropdown-menu">
+		                <li>@Html.ActionLink("About Us", "AboutUs", "Home")</li>
+		                <li>@Html.ActionLink("Advertise", "Advertise", "Home")</li>
+		                <li>@Html.ActionLink("Contact Us", "ContactUs", "Home")</li>
+		            </ul>
+		        </li>
+				
+			        
+		    </ul>
+		    <form action="@Url.Action("Search", "Apps")" method="GET" class="place-right">
+                <div class="input-control text" style="margin-bottom: 0;">
+                    <input type="text" name="query" />
+                    <button class="btn-search"></button>
+                </div>
+            </form>
+		</div>
+	</div>
+</div>
+<div class="page" id="page-index">
+    @RenderBody()
+</div>
+<div class="page">
+	<div class="nav-bar">
+		<div class="nav-bar-inner padding10">
+		    <span class="element">
+		        2013, WinApps &copy; by Itay Sagui and Ariel Ornstein
+		    </span>
+		    <span class="element place-right" style="margin: 0;">
+		        <span id="social-share"></span>
+		    </span>
+		</div>
+	</div>
+</div>
+
+    @RenderSection("Scripts", required: false)
+
+    <script type="text/javascript">
+        $('#social-share').share({
+            networks: [
+                'facebook',
+                'pinterest',
+                'googleplus',
+                'twitter',
+                'linkedin',
+                'tumblr',
+                'stumbleupon',
+                'digg',
+                'email'
+            ],
+            theme: 'square'
+        });
+
+    </script>
+
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        var pluginUrl = 
+            '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+        _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+
+        _gaq.push(['_setAccount', 'UA-38227565-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
+    </body>
+</html>

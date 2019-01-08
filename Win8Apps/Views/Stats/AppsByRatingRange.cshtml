@@ -1,0 +1,40 @@
+﻿@model System.Linq.IQueryable<Win8Apps.Model.Indexes.Apps_RatingRange.ReduceResult>
+
+
+<div id="apps-ratings-chart" style="width: 100%; height: 300px; margin: 0 auto"></div>
+
+<script type="text/javascript">
+    $(function() {
+
+        var chart;
+        var chartData = [
+            @foreach (var result in Model)
+            {
+                if (result.Rating == 0)
+                {
+                    continue;
+                }
+                var startRange = result.Rating - 1;
+                var endRange = result.Rating;
+
+                <text>{</text>
+                <text>rating: '@startRange - @endRange stars',</text>
+                <text>count: @result.Count</text>
+                <text>},</text>
+            }
+        ];
+        
+        AmCharts.ready(function() {
+            // PIE CHART
+            chart = new AmCharts.AmPieChart();
+            chart.dataProvider = chartData;
+            chart.titleField = "rating";
+            chart.valueField = "count";
+            chart.outlineColor = "#FFFFFF";
+            chart.outlineAlpha = 0.8;
+            chart.outlineThickness = 2;
+
+            chart.write("apps-ratings-chart");
+        });
+    });
+</script>

@@ -1,0 +1,243 @@
+﻿@using System.Collections.Specialized
+@using Win8Apps.Extensions
+@using Win8Apps.Model
+@using Win8Apps.Models
+@model Win8Apps.Models.SearchViewModel
+
+@{
+    ViewBag.Title = "WinApps - Search results";
+}
+
+@{
+    var requestUri = @ViewContext.RequestContext.HttpContext.Request.Url;
+    var requestUrl = requestUri.GetLeftPart(UriPartial.Path);
+
+    var query = HttpUtility.ParseQueryString(requestUri.Query);
+    int filtersCount = ViewBag.Filters.Count;
+    int facetsCount = Model.Facets.Count();
+}
+@if (query.Count == 0)
+{
+    query["query"] = ViewBag.QueryString;
+}
+
+@{
+
+    var sortByCatergoryVisible = (query["category"] != null);
+    var sortByCatergoryActive = (query["sortBy"] == "category") ? "strong" : "";
+    var sortByLanguageActive = (query["sortBy"] == "language") ? "strong" : "";
+    var sortByPriceActive = (query["sortBy"] == "price") ? "strong" : "";
+    var sortByScoreRatingActive = (query["sortBy"] == "scoreRating") ? "strong" : "";
+    var sortByTitleActive = (query["sortBy"] == "title") ? "strong" : "";
+
+    var sortOrder = ViewBag.sortOrder;
+    if (sortOrder == SortOrder.Desc)
+    {
+        sortOrder = SortOrder.Asce;
+    }
+    else
+    {
+        sortOrder = SortOrder.Desc;
+    }
+    var sortQuery = new NameValueCollection(query);
+
+    sortQuery["sortOrder"] = sortOrder.ToString();
+    
+    sortQuery["sortBy"] = "category";
+    var linkSortByCategory= string.Format("{0}?{1}", requestUrl, sortQuery.ConstructQueryString());
+    sortQuery["sortBy"] = "language";
+    var linkSortByLanguage = string.Format("{0}?{1}", requestUrl, sortQuery.ConstructQueryString());
+    sortQuery["sortBy"] = "price";
+    var linkSortByPrice = string.Format("{0}?{1}", requestUrl, sortQuery.ConstructQueryString());
+    sortQuery["sortBy"] = "scoreRating";
+    var linkSortByScoreRating = string.Format("{0}?{1}", requestUrl, sortQuery.ConstructQueryString());
+    sortQuery["sortBy"] = "title";
+    var linkSortByTitle = string.Format("{0}?{1}", requestUrl, sortQuery.ConstructQueryString());
+}
+
+<div class="page-region">
+    <div class="page-region-content">
+        <div class="grid">
+            <div class="row">
+                <div class="nav-bar">
+                    @{
+                        if (facetsCount > 0)
+                        {
+                            <div class="nav-bar-inner padding10 bg-color-darken">
+                                <span class="pull-menu"></span>
+                                <i class="fg-color-white icon-filter place-right" style="margin: 5px; font-size: 24px"></i>
+                                <ul class="menu">
+                                    <li><a><strong>Filter: </strong></a></li>
+                                    @foreach (var facet in Model.Facets)
+                                    {
+                                        var facetQuery = new NameValueCollection(query);
+                                        facetQuery.Remove("page");
+
+                                        <li><a><strong>@facet.Title</strong></a></li>
+                                        <li data-role="dropdown">
+                                            <a href="#">All</a>
+                                            <ul class="dropdown-menu">
+                                                @foreach (var val in facet.Values)
+                                                {
+                                                    facetQuery[facet.Title] = val.Range;
+                                                    var link = string.Format("{0}?{1}", requestUrl, facetQuery.ConstructQueryString());
+                                                    var facetText = val.Range;
+                                                    if (facetText == "EMPTY_STRING")
+                                                    {
+                                                        facetText = "<None>";
+                                                    }
+                                                    <li><a href="@link">@facetText [@val.Hits]</a></li>
+                                                }
+                                            </ul>
+                                        </li>
+                                    }
+                                </ul>
+                            </div>
+                        }
+                    }
+                    <div class="nav-bar-inner padding10 bg-color-blue">
+			            <span class="pull-menu"></span>
+                        <i class="fg-color-white icon-move-vertical place-right" style="margin: 5px; margin-right: 12px; font-size: 24px"></i>
+                        <ul class="menu">
+                            <li><a><strong>Sort By: </strong></a></li>
+                            <li><a href="@linkSortByTitle" class="@sortByTitleActive">Title</a></li>
+                            <li><a href="@linkSortByPrice" class="@sortByPriceActive">Price</a></li>
+                            @if (!sortByCatergoryVisible)
+                            {
+                                <li class=""><a href="@linkSortByCategory" class="@sortByCatergoryActive">Category</a></li>
+                            }
+                            <li><a href="@linkSortByScoreRating" class="@sortByScoreRatingActive">Rating</a></li>
+                            <li><a href="@linkSortByLanguage" class="@sortByLanguageActive">Language</a></li>
+                        </ul>
+                    </div>
+                   @{
+                       if (filtersCount > 0)
+                       {
+                           <div class="nav-bar-inner padding10 bg-color-pinkDark">
+                               <span class="pull-menu"></span>
+                               <i class="fg-color-white icon-remove place-right" style="margin: 5px; font-size: 24px"></i>
+                               <ul class="menu">
+                                   @{
+
+                                       foreach (var filter in ViewBag.Filters)
+                                       {
+                                           var filterQuery = new NameValueCollection(query);
+                                           filterQuery.Remove(filter.Query);
+                                           var link = string.Format("{0}?{1}", requestUrl, filterQuery.ConstructQueryString());
+                                           <li><a href="@link">[x] @filter.DisplayText</a></li>
+                                       }
+                                   }
+                               </ul>
+                           </div>
+                       }
+                   }
+                </div>
+            </div>
+        </div>
+        <div class="grid">
+            <div class="row">
+                @{
+                    int index = 0;
+                }
+                @foreach (var app in Model.Apps)
+                {
+                    index++;
+                    @Html.DisplayFor(x => app, "App")
+
+                    if (index%9 == 0)
+                    {
+                        <script type="text/javascript"><!--
+                            google_ad_client = "ca-pub-7040466421713161";
+                            /* Between Search Results */
+                            google_ad_slot = "3386576062";
+                            google_ad_width = 728;
+                            google_ad_height = 15;
+                            //-->
+                        </script>
+                        <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+                    }
+                }
+            </div>
+        </div>
+        <div class="grid">
+            <div class="row">
+                <div class="pagination" style="text-align: center;">
+                    <ul>
+                        @{
+                            var currentPage = Model.CurrentPage;
+                
+                            var prevActive = Model.HasPrevPage ? "" : "disabled";
+                            var nextActive = Model.HasNextPage ? "" : "disabled";
+                            query["page"] = (0).ToString();
+                            var linkFirst = !Model.HasPrevPage ? "#" : string.Format("{0}?{1}", requestUrl, query.ConstructQueryString());
+                            query["page"] = (currentPage - 1).ToString();
+                            var linkPrev = !Model.HasPrevPage ? "#" : string.Format("{0}?{1}", requestUrl, query.ConstructQueryString());
+                            query["page"] = (currentPage + 1).ToString();
+                            var linkNext = !Model.HasNextPage ? "#" : string.Format("{0}?{1}", requestUrl, query.ConstructQueryString());
+                            query["page"] = (Model.MaxPage).ToString();
+                            var linkLast = !Model.HasNextPage ? "#" : string.Format("{0}?{1}", requestUrl, query.ConstructQueryString());
+                        }
+                        <li class="first @prevActive">
+                            @if (Model.HasPrevPage){ 
+                                <a href="@linkFirst"></a>
+                            } else { 
+                                <a></a>
+                            }
+                        </li>
+                        <li class="prev @prevActive">
+                            @if (Model.HasPrevPage){ 
+                                <a href="@linkPrev"></a>
+                            } else { 
+                                <a></a>
+                            }
+                        </li>
+                        @{
+                            var actualMaxPage = Model.MaxPage;
+                            var minPage = currentPage - 2;
+                            var maxPage = currentPage + 2;
+                            if (minPage < 1)
+                            {
+                                minPage = 1;
+                            }
+                            if (maxPage > actualMaxPage)
+                            {
+                                maxPage = actualMaxPage;
+                            }
+                        }
+                        @if (minPage >= 2)
+                        {
+                            <li class="spaces"><a>...</a></li>
+                        }
+                        @{
+                            for (var i = minPage; i <= maxPage; i++)
+                            {
+                                var pageActive = i == currentPage ? "active" : "";
+                                query["page"] = i.ToString();
+                                var link = string.Format("{0}?{1}", requestUrl, query.ConstructQueryString());
+                                <li class="@pageActive"><a href="@link">@i</a></li>
+                            }
+                        }
+                        @if (maxPage < actualMaxPage)
+                        {
+                            <li class="spaces"><a>...</a></li>
+                        }
+                        <li class="next @nextActive">
+                            @if (Model.HasNextPage){ 
+                                <a href="@linkNext"></a>
+                            } else { 
+                                <a></a>
+                            }
+                        </li>
+                        <li class="last @nextActive">
+                            @if (Model.HasNextPage) { 
+                                <a href="@linkLast"></a>
+                            } else { 
+                                <a></a>
+                            }
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

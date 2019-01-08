@@ -1,0 +1,66 @@
+﻿@model Win8Apps.Models.TopicViewModel
+
+@{
+    ViewBag.Title = "WinApps - " + @Model.Topic.Title;
+}
+
+<div class="page-region">
+    <div class="page-region-content">
+        @if (Model == null)
+        {
+             <div class="page-header-content">
+                <h1>Topic not found...</h1>
+            </div>
+            <div class="grid">
+                <div class="row">
+                    <div class="span4 padding15 bg-color-blueLight" style="display: inline-block;">
+                        <img src="~/Content/images/TopicNotFound.png" alt="Topic not found"/>
+                    </div>
+                    <div class="span8">
+                        <h3>Oops... we couldn't find the requested topic.</h3>
+                    </div>
+                </div>
+            </div>
+        }
+        else
+        {
+            <div class="page-header-content">
+                <h1>@Model.Topic.Title</h1>
+            </div>
+            <div class="grid">
+                <div class="row">
+                    <div class="span4 padding15 bg-color-blueLight" style="display: inline-block;">
+                        @if (!string.IsNullOrEmpty(@Model.Topic.Image))
+                        {
+                            <img src="http://wscont2.apps.microsoft.com/winstore//1.4x/@Model.Topic.Image" alt="@Model.Topic.Title" />
+                        }
+                        <p style="width: 270px;">@Model.Topic.Description</p>
+                    </div>
+                    <div class="span8">
+                        @{
+                        int index = 0;
+                        }
+                        @foreach (var app in Model.Apps)
+                        {
+                            index++;
+                            @Html.DisplayFor(x => app, "App", new { small = true })
+
+                            if (index % 8 == 0)
+                            {
+                                <script type="text/javascript"><!--
+                                    google_ad_client = "ca-pub-7040466421713161";
+                                    /* Between Search Results */
+                                    google_ad_slot = "3562335263";
+                                    google_ad_width = 468;
+                                    google_ad_height = 15;
+                                    //-->
+                                </script>
+                                <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+                            }
+                        }
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

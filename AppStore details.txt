@@ -1,0 +1,84 @@
+C:\Users\itay.TZUNAMI\AppData\Local\Packages\WinStore_cw5n1h2txyewy\AC\Temp
+
+Search = https://services.apps.microsoft.com/search/{osVersion}.{osBuild}-{appModel}/{clientVersion}/{chromeLocale}_{localeList}/m/{market}/c/{country}/il/{inputLocale}/cp/{channelPartner}/query/cid/{categoryId}/pf/{priceFilter}/pc/{parentalControlFilter}/pt/{processorTypeFilter}/af/{accessibilityFilter}/lf/{languageFilter}/s/{sortBy}/{sortOrder}/pn/{pageNumber}?phrase={phrase}
+ProductTileByProductGuid =         https://services.apps.microsoft.com/browse/{osVersion}.{osBuild}-{appModel}/{clientVersion}/{chromeLocale}_{localeList}/c/{country}/cp/{channelPartner}/Apps/{appId}/tile
+ProductBrowseList = https://services.apps.microsoft.com/browse/{osVersion}.{osBuild}-{appModel}/{clientVersion}/{chromeLocale}_{localeList}/c/{country}/cp/{channelPartner}/AppTileList/cid/{categoryId}/pf/{priceFilter}/pc/{parentalControlFilter}/pt/{processorTypeFilter}/af/{accessibilityFilter}/lf/{languageFilter}/s/{sortBy}/{sortOrder}/pn/{pageNumber}, boi=820130816 mr=5
+ProductTileExtendedByProductGuid = https://services.apps.microsoft.com/browse/{osVersion}.{osBuild}-{appModel}/{clientVersion}/{chromeLocale}_{localeList}/c/{country}/cp/{channelPartner}/Apps/{appId}, boi=820130816 mr=5
+
+
+http://apps.microsoft.com/windows/sitemap_index.xml
+http://apps.microsoft.com/windows/sitemap/sitemap_1.xml
+
+
+https://services.apps.microsoft.com/browse/6.2.9200-1/615/en-US_en-US.en.he/c/{currency}/cp/10005001/AppTileList/cid/{categoryId}/pf/{priceFlag}/pc/0/pt/{platform}/af/1/lf/1/s/{sort}/{sortOrder}/pn/{pageNum}
+
+
+https://services.apps.microsoft.com/browse/6.2.9200-1/615/en-US_en-US.en.he/c/US/cp/10005001/AppTileList/cid/30/pf/1/pc/0/pt/x64/af/1/lf/1/s/3/2/pn/1
+https://services.apps.microsoft.com/browse/6.2.9200-1/615/en-US_en-US.en.he/c/US/cp/10005001/AppTileList/cid/31/pf/1/pc/0/pt/x64/af/1/lf/1/s/3/2/pn/1
+https://services.apps.microsoft.com/browse/6.2.9200-1/615/en-US_en-US.en.he/c/US/cp/10005001/AppTileList/cid/5/pf/1/pc/0/pt/x64/af/1/lf/1/s/3/2/pn/1
+https://services.apps.microsoft.com/browse/6.2.9200-1/615/en-US_en-US.en.he/c/US/cp/10005001/AppTileList/cid/5/pf/2/pc/0/pt/x64/af/1/lf/1/s/3/2/pn/1
+https://services.apps.microsoft.com/browse/6.2.9200-1/615/en-US_en-US.en.he/c/US/cp/10005001/AppTileList/cid/5/pf/3/pc/0/pt/x64/af/1/lf/1/s/3/2/pn/1
+https://services.apps.microsoft.com/browse/6.2.9200-1/615/en-US_en-US.en.he/c/US/cp/10005001/AppTileList/cid/5/pf/4/pc/0/pt/x64/af/1/lf/1/s/3/2/pn/1
+https://services.apps.microsoft.com/browse/6.2.9200-1/615/en-US_en-US.en.he/c/US/cp/10005001/AppTileList/cid/5/pf/4/pc/0/pt/x64/af/1/lf/1/s/4/2/pn/1
+https://services.apps.microsoft.com/browse/6.2.9200-1/615/en-US_en-US.en.he/c/US/cp/10005001/AppTileList/cid/5/pf/4/pc/0/pt/x64/af/1/lf/1/s/1/2/pn/1
+https://services.apps.microsoft.com/browse/6.2.9200-1/615/en-US_en-US.en.he/c/US/cp/10005001/AppTileList/cid/6/pf/1/pc/0/pt/x64/af/1/lf/1/s/3/2/pn/2
+
+
+
+https://services.apps.microsoft.com/browse/6.2.9200-1/615/en-US_en-US.en.he/c/{currency}/cp/10005001/Apps/{appId}
+<Emr><Pt><I>9bc68ddf-03e5-4908-944f-f8b3b61316f6</I><R>879d554b-c07e-4512-bb20-0d6bbba4eea5</R><B>879d554b-c07e-4512-bb20-0d6bbba4eea5</B><Pfn>28551Alfredtech.DealOrNoDeal_nvqy9j420z7zy</Pfn><L>en-US</L><T>DealOrNoDeal</T><Wr>12</Wr><Ico>879d554b-c07e-4512-bb20-0d6bbba4eea5/Icon.68925.png</Ico><Bg>#464646</Bg><Fg>light</Fg><Sr>3.1</Sr><Cs>$</Cs><Cc>USD</Cc><P>0.00</P><C><I>3</I><N>Games</N></C><Sc><I>44</I><N>Strategy</N></Sc><Typ>1</Typ><Acc>true</Acc><Dca>false</Dca><Try>false</Try><Lud>2013-01-06T08:16:59.22Z</Lud><Ats><At><N>DealOrNoDeal</N><Bg>#464646</Bg><Fg>light</Fg><Mai>App</Mai><Logo>879d554b-c07e-4512-bb20-0d6bbba4eea5/AppTile.2.68925.68246.png</Logo><Img><T>3</T><U>879d554b-c07e-4512-bb20-0d6bbba4eea5/AppTile.3.68925.68246.png</U></Img><Imgs><Img><T>1</T><U>879d554b-c07e-4512-bb20-0d6bbba4eea5/AppTile.1.68925.68246.png</U></Img><Img><T>3</T><U>879d554b-c07e-4512-bb20-0d6bbba4eea5/AppTile.3.68925.68246.png</U></Img></Imgs></At></Ats></Pt><S>1</S><D>Deal or No Deal is the name of several closely related television game shows. It is played with up to 26 cases (or, in some versions, boxes) with certain sums of money. The player chooses a case or a box to knock an amount of money off the board. take this one life time opportunities to become a Millinery (Note : Money not include)</D><Src>65</Src><Oc>true</Oc><Sls><Sl>English (United States)</Sl></Sls><Dev>Alfredtech</Dev><V>281474976710658</V><Cr>Copyright © 2012, PETA</Cr><Sws>mailto:legionhades@gmail.com</Sws><Ds>5197</Ds><Sas2><Sa2><An>x86</An></Sa2><Sa2><An>x64</An></Sa2><Sa2><An>ARM</An></Sa2></Sas2><Sss><Ss><U>879d554b-c07e-4512-bb20-0d6bbba4eea5/Screenshot.68925.1000000.jpg</U><Cap>Start Page</Cap></Ss><Ss><U>879d554b-c07e-4512-bb20-0d6bbba4eea5/Screenshot.68925.1000001.jpg</U><Cap>Play Page</Cap></Ss></Sss></Emr>
+
+
+https://services.apps.microsoft.com/4R/6.2.9200-1/615/en-US.en.he/m/US/Apps/cde423c4-860c-4876-b411-e658a2658e2d/Reviews/all/
+https://services.apps.microsoft.com/4R/6.2.9200-1/615/en-US.en.he/m/US/Apps/{appId}/Reviews/all/s/{sort}/{sortOrder}/pn/{pageNum}
+<Reviews><TotalReviewCount>5</TotalReviewCount><TotalRatingCount>9</TotalRatingCount><Review><Author><DisplayName></DisplayName><ImageUrl></ImageUrl><Location></Location><DisplayLastName></DisplayLastName></Author><ProductTrial>True</ProductTrial><ReviewID>1524931</ReviewID><ReviewTitle><![CDATA[Exactly What I Wanted]]></ReviewTitle><Rating>5</Rating><Comment><![CDATA[I'm pretty poor; so on the off chance I go into a restaurant I try to eat the most calories for the cheapest price. This app allows me to sort through the most unhealthy and fattening things to make sure I am getting the largest quantity of calories for the lowest cost.]]></Comment><Helpfulness><Total>0</Total><Yes>0</Yes></Helpfulness><LastUpdatedDate>2013-01-06T19:48:10.0000000Z</LastUpdatedDate></Review><Review><Author><DisplayName>Jose</DisplayName><ImageUrl>http://sn2files.storage.msn.com/y1mZNYZForT_dGguUvbE68ZlHGS6OaRlc_iVDGFo2I-l6IzPPtkGbqAXBa-feAf1cb5</ImageUrl><Location></Location><DisplayLastName></DisplayLastName></Author><ProductTrial>True</ProductTrial><ReviewID>1466508</ReviewID><ReviewTitle><![CDATA[I wish it had Saturated Fat info]]></ReviewTitle><Rating>4</Rating><Comment><![CDATA[Monosaturated fat and polysaturated fat are actually ok for you (in moderation, of course) which is why Total Fat is not that helpful if you don't know how much of it belongs to Saturated Fat and Trans Fat. If you add that, I'll buy the app. 
+Also, how do we recommend adding new restaurants?]]></Comment><Helpfulness><Total>0</Total><Yes>0</Yes></Helpfulness><LastUpdatedDate>2013-01-04T01:40:43.0000000Z</LastUpdatedDate></Review><Review><Author><DisplayName>Tr?n</DisplayName><ImageUrl>http://byfiles.storage.msn.com/y1mkF80yk12aalXyj1LBPKGhgW3DuSDBX9LZVOk9JQZNnxMXIKgTZH-D7Hxd8V44Hc6eEt9AyptfiO6d6n1mrmmvQ</ImageUrl><Location></Location><DisplayLastName></DisplayLastName></Author><ProductTrial>True</ProductTrial><ReviewID>804978</ReviewID><ReviewTitle><![CDATA[Very nice]]></ReviewTitle><Rating>5</Rating><Comment><![CDATA[Very nice app, I using this app daily]]></Comment><Helpfulness><Total>3</Total><Yes>2</Yes></Helpfulness><LastUpdatedDate>2012-11-26T18:15:41.0000000Z</LastUpdatedDate></Review><Review><Author><DisplayName>nikolai</DisplayName><ImageUrl></ImageUrl><Location></Location><DisplayLastName></DisplayLastName></Author><ProductTrial>True</ProductTrial><ReviewID>760484</ReviewID><ReviewTitle><![CDATA[very good]]></ReviewTitle><Rating>5</Rating><Comment><![CDATA[convenient!]]></Comment><Helpfulness><Total>3</Total><Yes>2</Yes></Helpfulness><LastUpdatedDate>2012-11-23T20:02:33.0000000Z</LastUpdatedDate></Review><Review><Author><DisplayName></DisplayName><ImageUrl></ImageUrl><Location></Location><DisplayLastName></DisplayLastName></Author><ProductTrial>False</ProductTrial><ReviewID>760087</ReviewID><ReviewTitle><![CDATA[Great app!]]></ReviewTitle><Rating>5</Rating><Comment><![CDATA[Nice!]]></Comment><Helpfulness><Total>2</Total><Yes>1</Yes></Helpfulness><LastUpdatedDate>2012-11-23T19:56:06.0000000Z</LastUpdatedDate></Review></Reviews>
+
+platform:
+x86
+x64
+arm
+
+categoryId:
+Games = 3
+Category 4 does not exist
+Social = 5
+Entertainment = 6
+Photo = 7
+Music & Video = 8
+Sports = 9
+Books & Reference = 10
+News & Weather = 11
+Health & Fitness = 12
+Food & Dining = 13
+Lifestyle = 14
+Shopping = 15
+Travel = 16
+Finance = 17
+Productivity = 18
+Tools = 19
+Security = 20
+Business = 21
+Education = 22
+Government = 23
+
+
+priceFlag
+1 All prices
+2 Free
+3 Free and Trial
+4 Paid
+
+sort
+1 rating
+2 price
+3 Noteworthy
+4 newest
+
+sortoder
+1 lower first
+2 higher first
+
+
+
+5884

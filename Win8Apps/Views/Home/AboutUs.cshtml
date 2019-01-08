@@ -1,0 +1,47 @@
+﻿@model dynamic
+
+@{
+    ViewBag.Title = "WinApps - About Us";
+}
+
+
+<div class="page secondary">
+    <div class="page-header">
+        <div class="page-header-content">
+            <h1>About Us</h1>
+            <a href="javascript:history.go(-1);" class="back-button big page-back"></a>
+        </div>
+    </div>
+    <div class="page-region">
+        <div class="page-region-content">
+            <div class="grid">
+                <div class="row">
+                    <div class="span6">
+                        WinApps' mission is to provide an improved UX to the Windows Store.
+                        WinApps will track Microsoft's apps store changes and will provide information
+                        such as app updates, new releases, price changes and extensive store statistics.
+                    
+
+                        The site is an initiative of <span itemscope itemtype="http://schema.org/Person"><span itemprop="name">Itay Sagui</span></span> and <span itemscope itemtype="http://schema.org/Person"><span itemprop="name">Ariel Ornstein</span></span>,
+                        software developers located in Israel. Visit the @Html.ActionLink("Contact Us", "ContactUs", "Home") page to get in touch and discuss
+                        any suggestions or comments you might have about this website.
+                    </div>
+                    <div class="span4">
+                        <div class="span4 padding30 text-center place-left bg-color-blueLight">
+                            <h3 class="text-center">Advertisment</h3>
+                            <script type="text/javascript"><!--
+                                google_ad_client = "ca-pub-7040466421713161";
+                                /* InfoPages sidebar */
+                                google_ad_slot = "6200441666";
+                                google_ad_width = 200;
+                                google_ad_height = 200;
+                            //-->
+                            </script>
+                            <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

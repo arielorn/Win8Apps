@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<job-scheduling-data xmlns="http://quartznet.sourceforge.net/JobSchedulingData"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ 				version="2.0">
+
+  <processing-directives>
+    <overwrite-existing-data>true</overwrite-existing-data>
+  </processing-directives>
+
+  <schedule>
+
+    <job>
+      <name>Facets</name>
+      <group>WinAppsMaintenance</group>
+      <description></description>
+      <job-type>WSReaper.Jobs.FacetsJob, WSReaper</job-type>
+      <durable>false</durable>
+      <recover>false</recover>
+      <!--<job-data-map>
+        <entry>
+          <key>key0</key>
+          <value>value0</value>
+        </entry>
+        <entry>
+          <key>key1</key>
+          <value>value1</value>
+        </entry>
+        <entry>
+          <key>key2</key>
+          <value>value2</value>
+        </entry>
+      </job-data-map>-->
+    </job>
+    <job>
+      <name>Indexes</name>
+      <group>WinAppsMaintenance</group>
+      <description></description>
+      <job-type>WSReaper.Jobs.IndexesJob, WSReaper</job-type>
+      <durable>false</durable>
+      <recover>false</recover>
+    </job>
+    <job>
+      <name>NewApps</name>
+      <group>WinAppsMaintenance</group>
+      <description></description>
+      <job-type>WSReaper.Jobs.GetAppsJob, WSReaper</job-type>
+      <durable>false</durable>
+      <recover>false</recover>
+    
+    </job>
+
+    <trigger>
+      <cron>
+        <name>every-6-hours-trigger</name>
+        <group>cron-group</group>
+
+        <job-name>Facets</job-name>
+        <job-group>WinAppsMaintenance</job-group>
+
+        <cron-expression>0 0 0/6 * * ?</cron-expression>
+      </cron>
+    </trigger>
+    
+    <trigger>
+      <cron>
+        <name>every-12-hours-trigger</name>
+        <group>cron-group</group>
+
+        <job-name>Indexes</job-name>
+        <job-group>WinAppsMaintenance</job-group>
+
+        <cron-expression>0 0 0/12 * * ?</cron-expression>
+      </cron>
+    </trigger>
+    
+    <trigger>
+      <cron>
+        <name>every-6-hours-trigger</name>
+        <group>cron-group</group>
+
+        <job-name>NewApps</job-name>
+        <job-group>WinAppsMaintenance</job-group>
+        
+        <job-data-map>
+          <entry>
+            <key>operation</key>
+            <value>New</value>
+          </entry>
+        </job-data-map>
+
+        <cron-expression>0 0 0/6 * * ?</cron-expression>
+      </cron>
+    </trigger>
+    
+
+  </schedule>
+
+</job-scheduling-data>
+

@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- sitemap-generator-url="http://www.auditmypc.com/free-sitemap-generator.asp" -->
+<!-- This sitemap was created using the free tool found here: http://www.auditmypc.com/free-sitemap-generator.asp -->
+<!-- Audit My PC also offers free security tools to help keep you safe during internet travels -->
+<urlset 
+		xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 
+		http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
+>
+<url>
+    <loc>http://www.winapps.co</loc>
+    <priority>1.0</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/</loc>
+    <priority>1.0</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Recent</loc>
+    <priority>1.0</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/TopGames</loc>
+    <priority>1.0</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/TopFreeGames</loc>
+    <priority>1.0</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/TopApps</loc>
+    <priority>1.0</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/TopFreeApps</loc>
+    <priority>1.0</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Topics</loc>
+    <priority>1.0</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Search?category=Games</loc>
+    <priority>0.9</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Search?category=Social</loc>
+    <priority>0.9</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Search?category=Photo</loc>
+    <priority>0.9</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Search?category=Education</loc>
+    <priority>0.9</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Search</loc>
+    <priority>1.0</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Stats/Overview</loc>
+    <priority>1.0</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Stats/Apps</loc>
+    <priority>1.0</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Stats/Developers</loc>
+    <priority>1.0</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Home/AboutUs</loc>
+    <priority>1.0</priority>
+    <changefreq>weekly</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Home/Advertise</loc>
+    <priority>1.0</priority>
+    <changefreq>weekly</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Home/ContactUs</loc>
+    <priority>1.0</priority>
+    <changefreq>weekly</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Search?category=Entertainment</loc>
+    <priority>0.9</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Search?category=Music%20%26%20Video</loc>
+    <priority>0.9</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Search?category=Sports</loc>
+    <priority>0.9</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Search?category=Books%20%26%20Reference</loc>
+    <priority>0.9</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Search?category=News%20%26%20Weather</loc>
+    <priority>0.9</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Search?category=Health%20%26%20Fitness</loc>
+    <priority>0.9</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Search?category=Food%20%26%20Dining</loc>
+    <priority>0.9</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Search?category=Lifestyle</loc>
+    <priority>0.9</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Search?category=Shopping</loc>
+    <priority>0.9</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Search?category=Travel</loc>
+    <priority>0.9</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Search?category=Finance</loc>
+    <priority>0.9</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Search?category=Productivity</loc>
+    <priority>0.9</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Search?category=Tools</loc>
+    <priority>0.9</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Search?category=Security</loc>
+    <priority>0.9</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Search?category=Business</loc>
+    <priority>0.9</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Search?category=Government</loc>
+    <priority>0.9</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Search?</loc>
+    <priority>1.0</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Search?category=Games&#x26;Subcategory=EMPTY_STRING</loc>
+    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Search?category=Games&#x26;Subcategory=Action</loc>
+    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Search?category=Games&#x26;Subcategory=Adventure</loc>
+    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Search?category=Games&#x26;Subcategory=Arcade</loc>
+    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Search?category=Games&#x26;Subcategory=Card</loc>
+    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Search?category=Games&#x26;Subcategory=Casino</loc>
+    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Search?category=Games&#x26;Subcategory=Family</loc>
+    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Search?category=Games&#x26;Subcategory=Kids</loc>
+    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Search?category=Games&#x26;Subcategory=Music</loc>
+    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Search?category=Games&#x26;Subcategory=Puzzle</loc>
+    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Search?category=Games&#x26;Subcategory=Racing</loc>
+    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Search?category=Games&#x26;Subcategory=Role+playing</loc>
+    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Search?category=Games&#x26;Subcategory=Shooter</loc>
+    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Search?category=Games&#x26;Subcategory=Simulation</loc>
+    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Search?category=Games&#x26;Subcategory=Sports</loc>
+    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Search?category=Games&#x26;Subcategory=Strategy</loc>
+    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Search?category=News+%26+Weather&#x26;Subcategory=EMPTY_STRING</loc>
+    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Search?category=News+%26+Weather&#x26;Subcategory=News</loc>
+    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Search?category=News+%26+Weather&#x26;Subcategory=Weather</loc>
+    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Search?category=Music+%26+Video&#x26;Subcategory=EMPTY_STRING</loc>
+    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Search?category=Music+%26+Video&#x26;Subcategory=Music</loc>
+    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Search?category=Music+%26+Video&#x26;Subcategory=Video</loc>
+    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Search?category=Books+%26+Reference&#x26;Subcategory=EMPTY_STRING</loc>
+    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Search?category=Books+%26+Reference&#x26;Subcategory=E-reader</loc>
+    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Search?category=Books+%26+Reference&#x26;Subcategory=Fiction</loc>
+    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Search?category=Books+%26+Reference&#x26;Subcategory=Kids</loc>
+    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Search?category=Books+%26+Reference&#x26;Subcategory=Non-fiction</loc>
+    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Search?category=Books+%26+Reference&#x26;Subcategory=Reference</loc>
+    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Search?category=Security&#x26;Subcategory=EMPTY_STRING</loc>
+    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Search?category=Security&#x26;Subcategory=Personal+security</loc>
+    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Search?category=News+%26+Weather</loc>
+    <priority>0.9</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Search?category=Music+%26+Video</loc>
+    <priority>0.9</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Search?category=Books+%26+Reference</loc>
+    <priority>0.9</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Search?Subcategory=Music&#x26;Category=Games</loc>
+    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Search?Subcategory=Music&#x26;Category=Music+%26+Video</loc>
+    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Search?Subcategory=Kids&#x26;Category=Books+%26+Reference</loc>
+    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Search?Subcategory=Kids&#x26;Category=Games</loc>
+    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Search?Subcategory=EMPTY_STRING&#x26;Category=Books+%26+Reference</loc>
+    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Search?Subcategory=EMPTY_STRING&#x26;Category=Business</loc>
+    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Search?Subcategory=EMPTY_STRING&#x26;Category=Education</loc>
+    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Search?Subcategory=EMPTY_STRING&#x26;Category=Entertainment</loc>
+    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Search?Subcategory=EMPTY_STRING&#x26;Category=Finance</loc>
+    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Search?Subcategory=EMPTY_STRING&#x26;Category=Food+%26+Dining</loc>
+    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Search?Subcategory=EMPTY_STRING&#x26;Category=Games</loc>
+    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Search?Subcategory=EMPTY_STRING&#x26;Category=Government</loc>
+    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Search?Subcategory=EMPTY_STRING&#x26;Category=Health+%26+Fitness</loc>
+    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Search?Subcategory=EMPTY_STRING&#x26;Category=Lifestyle</loc>
+    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Search?Subcategory=EMPTY_STRING&#x26;Category=Music+%26+Video</loc>
+    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Search?Subcategory=EMPTY_STRING&#x26;Category=News+%26+Weather</loc>
+    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Search?Subcategory=EMPTY_STRING&#x26;Category=Photo</loc>
+    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Search?Subcategory=EMPTY_STRING&#x26;Category=Productivity</loc>
+    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Search?Subcategory=EMPTY_STRING&#x26;Category=Security</loc>
+    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Search?Subcategory=EMPTY_STRING&#x26;Category=Shopping</loc>
+    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Search?Subcategory=EMPTY_STRING&#x26;Category=Social</loc>
+    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Search?Subcategory=EMPTY_STRING&#x26;Category=Sports</loc>
+    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Search?Subcategory=EMPTY_STRING&#x26;Category=Tools</loc>
+    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Search?Subcategory=EMPTY_STRING&#x26;Category=Travel</loc>
+    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Search?Category=Food+%26+Dining</loc>
+    <priority>0.9</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Search?Category=Health+%26+Fitness</loc>
+    <priority>0.9</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Topic?topicId=AppsLists%2F10431535</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Topic?topicId=AppsLists%2F10424400</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Topic?topicId=AppsLists%2F10432720</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Topic?topicId=AppsLists%2F10411471</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Topic?topicId=AppsLists%2F10431719</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Topic?topicId=AppsLists%2F10431483</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Topic?topicId=AppsLists%2F10411479</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Topic?topicId=AppsLists%2F10383625</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Topic?topicId=AppsLists%2F10432711</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Topic?topicId=AppsLists%2F10411474</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+</url>
+<url>
+    <loc>http://www.winapps.co/Apps/Topic?topicId=AppsLists%2F10404245</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+</url>
+</urlset>

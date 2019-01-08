@@ -1,0 +1,33 @@
+﻿@model IEnumerable<Raven.Abstractions.Data.FacetValue>
+
+
+<div id="apps-categories-chart" style="width: 100%; height: 500px; margin: 0 auto"></div>
+
+<script type="text/javascript">
+    $(function() {
+
+        var chart;
+        var chartData = [
+            @foreach (var result in Model)
+            {
+                <text>{</text>
+                <text>category: '@result.Range',</text>
+                <text>count: @result.Hits</text>
+                <text>},</text>
+            }
+        ];
+        
+        AmCharts.ready(function() {
+            // PIE CHART
+            chart = new AmCharts.AmPieChart();
+            chart.dataProvider = chartData;
+            chart.titleField = "category";
+            chart.valueField = "count";
+            chart.outlineColor = "#FFFFFF";
+            chart.outlineAlpha = 0.8;
+            chart.outlineThickness = 2;
+
+            chart.write("apps-categories-chart");
+        });
+    });
+</script>

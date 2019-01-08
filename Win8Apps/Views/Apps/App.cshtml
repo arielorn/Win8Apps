@@ -1,0 +1,250 @@
+﻿@using Win8Apps.Model
+@using Win8Apps.Extensions
+@model App
+
+@if (Model == null)
+{
+    return;
+}
+@{
+    var color = Model.Foreground == "light" ? "fg-color-white" : "fg-color-black";
+    var inverse = Model.Foreground == "light" ? "" : "inverse";
+    var readableSize = UtilityMethods.GetSizeReadable(Model.DownloadSize);
+
+    ViewBag.Title = "WinApps - " + Model.Title;
+
+}
+
+
+@section Head
+{
+    <meta name="application-name" content="WinApps - @Model.Title" />
+    <meta name="description" content="WinApps - @Model.Description">
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="WinApps presents '@Model.Title'"/>
+    <meta property="og:url" content="http://www.winapps.co/Apps/App/@Model.AppId"/>
+    <meta property="og:image" content="http://wscont2.apps.microsoft.com/winstore//1x/@Model.Icon"/>
+    <meta property="og:site_name" content="WinApps presents '@Model.Title'"/>
+    <meta property="og:description" content="WinApps: @Model.Description"/>
+    
+    <meta name="msApplication-ID" content="@Model.AppId" />
+    <meta name="msApplication-PackageFamilyName" content="@Model.PackageFamilyName" />
+    <meta name="msapplication-TileImage" content="http://wscont2.apps.microsoft.com/winstore//1x/@Model.Icon" />
+    <meta name="msapplication-TileColor" content="@Model.Background" />
+    <meta name="msApplication-OptOut" content="switch" />
+
+}
+
+<div class="page" itemscope itemtype="http://schema.org/SoftwareApplication">
+    <div class="page-header">
+        <div class="page-header-content">
+            <h1 itemprop="name">@Model.Title</h1>
+        </div>
+    </div>
+ 
+    <div class="page-region" >
+        <div class="page-region-content">
+            <div class="page snapped" style="background-color: @Model.Background; min-height:600px;">
+                <div class="grid" style="margin: 10px;">
+                    <div class="row">
+                        <img src="http://wscont2.apps.microsoft.com/winstore//1x/@Model.Icon" alt="@Model.Title" itemprop="image"/>
+                    </div>
+                    <div class="row  @color" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+                        <div class="rating @inverse" data-role="rating" data-param-vote="off" data-param-rating="@Model.ScoreRating" data-param-stars="5">
+                        </div>
+                        <span style="visibility: hidden" itemprop="ratingValue">@Model.ScoreRating</span>
+                        <span itemprop="ratingCount">@Model.RatingCount</span> ratings
+                    </div>
+                    <div class="row" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                        <h3 class="@color">
+                            <strong>
+                                @if (Model.Price.Amount == 0)
+                                {
+                                    <span itemprop="price">Free</span>
+                                }
+                                else
+                                {
+                                    <span itemprop="price">@Model.Price.Amount</span> <span itemprop="priceCurrency">@Model.Price.Currency</span>
+                                }
+                            </strong>
+                        </h3>
+                    </div>
+                    @if (Model.IsActive)
+                    {
+                        <div class="row text-center">
+                            <a id="download-button" class="button border-color-white bg-color-darken fg-color-white" 
+                               style="visibility: hidden"
+                               href="ms-windows-store:PDP?PFN=@Model.PackageFamilyName">
+                                Download from Store
+                            </a>
+                        </div>
+                    }
+                    
+                    <div class="row @color" style="position: absolute; bottom: 10px;">
+                        @if (Model.Permissions != null && Model.Permissions.Count > 0)
+                        {
+                            <strong>This app has permissions to use:</strong>
+                            <ul class="unstyled" itemprop="permissions">
+                                @foreach (var permission in Model.Permissions)
+                                {
+                                    <li>@permission.GetDescription()</li>
+                                }
+                            </ul>
+                        }
+                        Category: 
+                        <strong>
+                            <span itemprop="applicationCategory">
+                                @Html.ActionLink(Model.Category.Name, "Search", "Apps", new { category = Model.Category.Name }, new { @class = @color, style = "text-decoration: underline;" })
+                            </span>
+                            @if (Model.SubCategory != null)
+                            {
+                                <text>&gt;</text>
+                                <span itemprop="applicationSubCategory">
+                                    @Html.ActionLink(Model.SubCategory.Name, "Search", "Apps", new { category = Model.Category.Name, subCategory = Model.SubCategory.Name }, new { @class = @color, style = "text-decoration: underline;" })
+                                </span>
+                            }
+                        </strong><br />
+                        Download size: <span itemprop="fileSize">@readableSize</span><br />
+                        Age Rating: @Model.AgeRating+<br />
+                        Publisher: <span itemprop="author">@Html.ActionLink(Model.Developer, "Search", "Apps", new { developer = Model.Developer }, new { @class = @color, style = "text-decoration: underline;" })</span><br />
+                        <span class="@color tertiary-text" itemprop="copyrightHolder">
+                            @Model.Copyrights
+                        </span>
+                    </div>
+                </div>
+            </div>
+           
+            <div class="page fill" style="float: left; min-height:600px;">
+                <div class="page-control" data-role="page-control">
+                    @* === Tabs ===*@
+                    <ul>
+                        <li class="active"><h2><a href="#overview">Overview</a></h2></li>
+                        <li><h2><a href="#details">Details</a></h2></li>
+                    </ul>
+                    @*=== Tabs content ===*@
+                    <div class="frames">
+                        <div class="frame active" id="overview">
+                            <div class="grid" style="margin: 10px;">
+                                <div class="row" >
+                                    <div class="hero-unit">
+                                        <div class="carousel" style="height: 300px;" data-role="carousel" data-param-effect="slide" data-param-direction="left" data-param-duration="1000" data-param-period="4000">
+                                            <div class="slides">
+                                                @for (int index = 0; index < Model.Screenshots.Count; index++)
+                                                {
+                                                    var screenshot = Model.Screenshots[index];
+                                                    var id = "slide" + index;
+                                                    <div class="slide image" id="@id" itemprop="screenshot" itemscope itemtype="http://schema.org/ImageObject">
+                                                        <img src="http://wscont2.apps.microsoft.com/winstore//1x/@screenshot.Url" alt="@screenshot.Caption" itemprop="contentUrl" />
+                                                        <div class="description" itemprop="caption">
+                                                            @screenshot.Caption
+                                                        </div>
+                                                    </div>
+                                                }
+                                            </div>
+
+                                            <span class="control left bg-color-darken">&#8249;</span>
+                                            <span class="control right bg-color-darken">&#8250;</span>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <p>
+                                        <strong>Description:</strong><br/>
+                                        <span style="white-space: pre-line" itemprop="description">@Model.Description</span>
+                                    </p>
+                                    @if (Model.Features != null && Model.Features.Count > 0)
+                                    {
+                                        <div>
+                                            <strong>Features:</strong>
+                                            <ul style="padding-left: 2em; text-indent: -1.9em;" itemprop="featureList">
+                                                @foreach (var feature in @Model.Features)
+                                                {
+                                                    <li><span style="white-space: pre-line" >@feature</span></li>
+                                                }
+                                            </ul>
+                                        </div>
+                                    }
+                                    <p>
+                                        <strong>Learn More:</strong><br/>
+                                        <a href="@Model.SupportWebsite">@Model.Title Support</a>
+                                    </p>
+                                    <p>
+                                        <strong>Additional Terms:</strong><br/>
+                                        <a href="@Model.PrivacyPolicy">@Model.Developer Privacy Policy</a><br/>
+                                        @if (!string.IsNullOrEmpty(@Model.Eula))
+                                        {
+                                            @Model.Eula
+                                        }
+
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="frame" id="details">
+                            <div class="grid" style="margin: 10px;">
+                                <div class="row">
+                                    <p>
+                                        <strong>Supported Processors:</strong><br/>
+                                        @for (int index = 0; index < @Model.SupportedPlatforms.Count; index++)
+                                        {
+                                            var platform = @Model.SupportedPlatforms[index];
+                                            var comma = index > 0 ? ", " : "";
+                                            <text>@comma</text>
+                                            <span itemprop="operatingSystem">@platform</span>
+                                        }
+                                    </p>
+                                    <p>
+                                        <strong>Supported Languages:</strong><br/>
+                                        @{
+                                            var languages = string.Join(", ", @Model.SupportedLanguages.ToArray());
+                                        }
+                                        <span>@languages</span>
+                                    </p>
+                                    @if (Model.Permissions != null && Model.Permissions.Count > 0)
+                                    {
+                                        <div>
+                                            <strong>This app has permissions to use:</strong><br />
+                                            <ul class="unstyled">
+                                                @foreach (var permission in Model.Permissions)
+                                                {
+                                                    <li>@permission.GetDescription()</li>
+                                                }
+                                            </ul>
+                                        </div>
+                                    }
+                                </div>
+                                <div class="row">
+                                    <div class="span6">
+                                        <div class="span7 padding15 text-center">
+                                            <h3 class="text-center">Advertisment</h3>
+                                            <script type="text/javascript"><!--
+                                                google_ad_client = "ca-pub-7040466421713161";
+                                                /* AppDetails */
+                                                google_ad_slot = "2629696463";
+                                                google_ad_width = 468;
+                                                google_ad_height = 60;
+                                            //-->
+                                            </script>
+                                            <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+               
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    if (navigator.userAgent.match('NT 6.2') !== null) {
+        $('#download-button').css("visibility", "visible");
+    }
+</script>
+

@@ -1,0 +1,48 @@
+﻿@model IEnumerable<Raven.Abstractions.Data.FacetValue>
+
+
+<div id="apps-languages-chart" style="width: 100%; height: 400px; margin: 0 auto"></div>
+
+<script type="text/javascript">
+    $(function() {
+
+        var chart;
+        var chartData = [
+            @foreach (var result in Model)
+            {
+                <text>{</text>
+                <text>platform: '@result.Range',</text>
+                <text>count: @result.Hits</text>
+                <text>},</text>
+            }
+        ];
+        
+        AmCharts.ready(function() {
+            // SERIAL CHART
+            chart = new AmCharts.AmSerialChart();
+            chart.dataProvider = chartData;
+            chart.categoryField = "platform";
+            chart.startDuration = 1;
+
+            // AXES
+            // category
+            var categoryAxis = chart.categoryAxis;
+            categoryAxis.labelRotation = 90;
+            categoryAxis.gridPosition = "start";
+
+            // value
+            // in case you don't want to change default settings of value axis,
+            // you don't need to create it, as one value axis is created automatically.
+            // GRAPH
+            var graph = new AmCharts.AmGraph();
+            graph.valueField = "count";
+            graph.balloonText = "[[category]]: [[value]]";
+            graph.type = "column";
+            graph.lineAlpha = 0;
+            graph.fillAlphas = 0.8;
+            chart.addGraph(graph);
+
+            chart.write("apps-languages-chart");
+        });
+    });
+</script>

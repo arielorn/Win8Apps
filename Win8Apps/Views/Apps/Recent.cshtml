@@ -1,0 +1,23 @@
+﻿@model IEnumerable<Win8Apps.Model.App>
+
+<div class="my-thumbnails">
+    @foreach (var app in Model)
+    {
+        var color = app.Foreground == "light" ? "white" : "black";
+        var bgColor = app.Background ?? "#FFFFFF";
+        <div class="my-tile my-tile-double" style="border: 1px solid black; background: @bgColor; color: @color">
+            <div class="my-tile-image">
+                <img style="width:48px; height:48px" alt="" src="#"/>
+            </div>
+            <div class="my-tile-text">
+                <div class="app-title">@app.Title</div>
+                <div class="app-developer">@app.Developer</div>
+            </div>
+            <div class="my-tile-content">@app.Description</div>
+            <div class="my-tile-footer">
+                <div class="app-rating">Rating: @app.ScoreRating</div>
+                <div class="app-price">@app.Price.Amount$</div>
+            </div>
+        </div>
+    }
+</div>

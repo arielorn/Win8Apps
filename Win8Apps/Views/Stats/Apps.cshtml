@@ -1,0 +1,64 @@
+﻿@{
+    ViewBag.Title = "WinApps - Apps statistics";
+}
+
+<div class="page-region">
+    <div class="page-region-content">
+        <div class="grid">
+            <div class="row">
+                <div class="span12">
+                    <div class="span12 bg-color-pink">
+                        <i class="fg-color-white icon-cube place-right" style="margin: 10px; margin-top: 18px;  font-size: 30px"></i>
+                        <h2 class="fg-color-white">&nbsp;Applications by Category</h2>
+                    </div>
+                    <div class="span12">
+                        @{
+                            Html.RenderAction("AppsByCategory", "Stats");
+                        }
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="span6">
+                    <div class="span6 bg-color-green">
+                        <i class="fg-color-white icon-screen place-right" style="margin: 10px; margin-top: 18px;  font-size: 30px"></i>
+                        <h2 class="fg-color-white">&nbsp;Applications by Platform</h2>
+                    </div>
+                    <div class="span6">
+                        @{
+                            Html.RenderAction("AppsByPlatform", "Stats");
+                        }
+                    </div>
+                </div>
+                <div class="span6">
+                    <div class="span6 bg-color-orange">
+                        <i class="fg-color-white icon-comments-2 place-right" style="margin: 10px; margin-top: 18px;  font-size: 30px"></i>
+                        <h2 class="fg-color-white">&nbsp;Applications by Languages</h2>
+                    </div>
+                    <div class="span6">
+                        @{
+                            Html.RenderAction("AppsByLanguage", "Stats");
+                        }
+                    </div>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="span6">
+                    <div class="span6 bg-color-blue">
+                        <i class="fg-color-white icon-star-2 place-right" style="margin: 10px; margin-top: 18px;  font-size: 30px"></i>
+                        <h2 class="fg-color-white">&nbsp;Applications by Rating</h2>
+                    </div>
+                    <div class="span6">
+                        @{
+                            Html.RenderAction("AppsByRatingRange", "Stats");
+                        }
+                    </div>
+                </div>
+                <div class="span6">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

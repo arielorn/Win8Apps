@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = "WinApps - Statistics";
+}
+
+<div class="page-region">
+    <div class="page-region-content">
+        <div class="grid">
+            <div class="row">
+                <div class="span12 bg-color-green">
+                    <i class="fg-color-white icon-calendar place-right" style="margin: 10px; margin-top: 18px;  font-size: 30px"></i>
+                    <h2 class="fg-color-white">&nbsp;Number of Apps By Date</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="span12">
+                    @{
+                        Html.RenderAction("AppsByDate", "Stats");
+                    }
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="span12 bg-color-green">
+                    <i class="fg-color-white icon-calendar place-right" style="margin: 10px; margin-top: 18px;  font-size: 30px"></i>
+                    <h2 class="fg-color-white">&nbsp;Number of Developers By Date</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="span12">
+                    @{
+                        Html.RenderAction("DevByDate", "Stats");
+                    }
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

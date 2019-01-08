@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WSReaper", "WSReaper\WSReaper.csproj", "{E8D7569F-EEE5-463A-9F5A-F8FE98E4F189}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{FA38D966-73DD-4B7A-9126-28A261367F9D}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Win8Apps", "Win8Apps\Win8Apps.csproj", "{0F0471F1-D9E5-4B68-98BD-30A98330EF70}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Win8Apps.Model", "Win8Apps.Model\Win8Apps.Model.csproj", "{71568BD3-58C3-4D60-B8F3-70CA60F239FB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{AC02DA0B-ABD7-4F07-BF74-5A13DB302C88}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://weddy.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Win8Apps.Model\\Win8Apps.Model.csproj
+		SccProjectName1 = Win8Apps.Model
+		SccLocalPath1 = Win8Apps.Model
+		SccProjectUniqueName2 = Win8Apps\\Win8Apps.csproj
+		SccProjectName2 = Win8Apps
+		SccLocalPath2 = Win8Apps
+		SccProjectUniqueName3 = WSReaper\\WSReaper.csproj
+		SccProjectName3 = WSReaper
+		SccLocalPath3 = WSReaper
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E8D7569F-EEE5-463A-9F5A-F8FE98E4F189}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8D7569F-EEE5-463A-9F5A-F8FE98E4F189}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8D7569F-EEE5-463A-9F5A-F8FE98E4F189}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8D7569F-EEE5-463A-9F5A-F8FE98E4F189}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F0471F1-D9E5-4B68-98BD-30A98330EF70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F0471F1-D9E5-4B68-98BD-30A98330EF70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F0471F1-D9E5-4B68-98BD-30A98330EF70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F0471F1-D9E5-4B68-98BD-30A98330EF70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71568BD3-58C3-4D60-B8F3-70CA60F239FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71568BD3-58C3-4D60-B8F3-70CA60F239FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71568BD3-58C3-4D60-B8F3-70CA60F239FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71568BD3-58C3-4D60-B8F3-70CA60F239FB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
